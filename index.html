@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'Brien's Classic Barbershop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">✂</span>
+        <span class="logo-text">O'Brien's <em>Barbershop</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#schedule" class="btn-book-nav">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge fade-in-up">EST. 1987</div>
+      <h1 class="hero-title fade-in-up delay-1">
+        <span class="title-line">The Gentleman's</span>
+        <span class="title-line title-accent">Choice</span>
+      </h1>
+      <p class="hero-subtitle fade-in-up delay-2">Where tradition meets craftsmanship — over 35 years of serving the community with pride, razor-sharp precision, and a good conversation.</p>
+      <div class="hero-divider fade-in-up delay-2">
+        <span class="barber-pole-mini"></span>
+      </div>
+      <div class="hero-actions fade-in-up delay-3">
+        <a href="#schedule" class="btn btn-primary">
+          <span>Schedule a Visit</span>
+          <span class="btn-icon">✂</span>
+        </a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+      <div class="hero-stats fade-in-up delay-3">
+        <div class="stat">
+          <span class="stat-number">35+</span>
+          <span class="stat-label">Years of Service</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-number">10K+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-number">4.9</span>
+          <span class="stat-label">Star Rating</span>
+        </div>
+      </div>
+    </div>
+    <!-- Decorative barber pole -->
+    <div class="barber-pole left-pole"></div>
+    <div class="barber-pole right-pole"></div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">A Legacy of Craftsmanship</h2>
+        <div class="section-divider"><span></span></div>
+      </div>
+      <div class="about-grid">
+      <div class="about-text anim-hidden">
+        <p>Founded in <strong>1987</strong>, O'Brien's Classic Barbershop has been the cornerstone of gentlemanly grooming for over three decades. What started as a single-chair shop on Main Street has grown into a trusted neighborhood institution — but our philosophy remains unchanged: every man deserves a cut done with care, precision, and respect.</p>
+        <p>We don't do rush jobs or assembly-line service. Each appointment is treated as a personal craft session where quality matters more than quantity. Our barbers are master artisans trained in the traditional techniques passed down through generations of the trade.</p>
+      </div>
+      <div class="about-features anim-hidden">
+        <div class="about-feature fade-in-up">
+          <div class="about-feature-icon">&#9733;</div>
+          <span class="about-feature-name">Master Barbers</span>
+        </div>
+        <div class="about-feature fade-in-up delay-1">
+          <div class="about-feature-icon">&#9874;</div>
+          <span class="about-feature-name">Premium Products</span>
+        </div>
+        <div class="about-feature fade-in-up delay-2">
+          <div class="about-feature-icon">&#9829;</div>
+          <span class="about-feature-name">Since 1987</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Our Services</h2>
+        <div class="section-divider"><span></span></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in-up">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48"><path d="M20 12 C20 12, 16 18, 16 26 L16 52 M44 12 C44 12, 48 18, 48 26 L48 52" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/><line x1="16" y1="26" x2="48" y2="26" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="40" r="8" stroke="currentColor" fill="none" stroke-width="3"/><line x1="28" y1="40" x2="36" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Classic Haircut</h3>
+          <p class="service-price">$35</p>
+          <p class="service-desc">A timeless cut using traditional scissors-over-comb technique, includes hot towel and styling.</p>
+        </div>
+        <div class="service-card fade-in-up delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48"><rect x="20" y="8" width="24" height="4" rx="2" fill="currentColor"/><line x1="32" y1="12" x2="32" y2="56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><rect x="24" y="48" width="16" height="6" rx="2" fill="currentColor"/></svg>
+          </div>
+          <h3>Razor Shave</h3>
+          <p class="service-price">$30</p>
+          <p class="service-desc">Hot lather, straight razor treatment with premium aftershave balm for the smoothest finish.</p>
+        </div>
+        <div class="service-card fade-in-up delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48"><path d="M16 28 C16 16, 48 16, 48 28 L48 40 C48 52, 16 52, 16 40 Z" stroke="currentColor" fill="none" stroke-width="3"/><path d="M24 28 L40 28 M24 36 L40 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Beard Trim</h3>
+          <p class="service-price">$25</p>
+          <p class="service-desc">Precision beard shaping and grooming with clippers and straight edge for clean lines.</p>
+        </div>
+        <div class="service-card fade-in-up delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="32" r="18" stroke="currentColor" fill="none" stroke-width="3"/><path d="M24 32 L30 38 L40 26" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Haircut & Beard Combo</h3>
+          <p class="service-price">$55</p>
+          <p class="service-desc">The complete package — full haircut and beard grooming for a polished look from top to bottom.</p>
+        </div>
+        <div class="service-card fade-in-up delay-4">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="28" r="14" stroke="currentColor" fill="none" stroke-width="3"/><path d="M22 44 L26 54 M42 44 L38 54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Hair Coloring</h3>
+          <p class="service-price">$45</p>
+          <p class="service-desc">Professional color treatment to cover grays or try a new look with premium products.</p>
+        </div>
+        <div class="service-card fade-in-up delay-5">
+          <div class="service-icon">
+            <svg viewBox="0 0 64 64" width="48" height="48"><path d="M20 16 C20 16, 32 24, 32 24 C32 24, 44 16, 44 16" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/><line x1="32" y1="24" x2="32" y2="48" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="52" r="4" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+          </div>
+          <h3>Kids Haircut</h3>
+          <p class="service-price">$25</p>
+          <p class="service-desc">Patient, friendly service for the young gentlemen — all styles and ages welcome.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">From The Shop</h2>
+        <div class="section-divider"><span></span></div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in-up">
+          <img src="https://images.unsplash.com/photo-1503951914875-452161b75e73?w=400&h=400&fit=crop&q=80" alt="Classic haircut style" loading="lazy">
+          <div class="gallery-overlay"><span>Classic Cuts</span></div>
+        </div>
+        <div class="gallery-item fade-in-up delay-1">
+          <img src="https://images.unsplash.com/photo-1621605813440-a3aee38eeefd?w=400&h=400&fit=crop&q=80" alt="Beard grooming" loading="lazy">
+          <div class="gallery-overlay"><span>Beard Grooming</span></div>
+        </div>
+        <div class="gallery-item fade-in-up delay-2">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f76385746?w=400&h=400&fit=crop&q=80" alt="Shop tools" loading="lazy">
+          <div class="gallery-overlay"><span>Traditional Tools</span></div>
+        </div>
+        <div class="gallery-item fade-in-up delay-3">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&h=400&fit=crop&q=80" alt="Barber at work" loading="lazy">
+          <div class="gallery-overlay"><span>Expert Craft</span></div>
+        </div>
+        <div class="gallery-item fade-in-up delay-4">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c70e8726?w=400&h=400&fit=crop&q=80" alt="Barber chair" loading="lazy">
+          <div class="gallery-overlay"><span>The Chair</span></div>
+        </div>
+        <div class="gallery-item fade-in-up delay-5">
+          <img src="https://images.unsplash.com/photo-1596728325488-58c87691e9a0?w=400&h=400&fit=crop&q=80" alt="Finished look" loading="lazy">
+          <div class="gallery-overlay"><span>Final Result</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section (with calendar) -->
+  <section class="schedule section" id="schedule">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Appointments</span>
+        <h2 class="section-title">Book Your Visit</h2>
+        <p class="section-subtitle">Click on any available date to schedule your appointment. We're closed on Sundays.</p>
+        <div class="section-divider"><span></span></div>
+      </div>
+
+      <!-- Calendar Widget -->
+      <div class="calendar-wrapper fade-in-up">
+        <div class="calendar-container" id="calendarContainer">
+          <div class="calendar-header">
+            <button class="calendar-nav prev-month" id="prevMonth">&#10094;</button>
+            <h3 class="calendar-title" id="calendarTitle"></h3>
+            <button class="calendar-nav next-month" id="nextMonth">&#10095;</button>
+          </div>
+          <div class="calendar-weekdays">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+          </div>
+          <div class="calendar-days" id="calendarDays"></div>
+        </div>
+      </div>
+
+      <!-- Hours Banner -->
+      <div class="hours-banner fade-in-up">
+        <p class="hours-icon">&#9201;</p>
+        <p><strong>Business Hours:</strong> Monday – Saturday &nbsp;|&nbsp; 8:00 AM – 7:00 PM</p>
+        <p><strong>Closed:</strong> Every Sunday</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What They Say</h2>
+        <div class="section-divider"><span></span></div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in-up">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Best barbershop in town — been coming here for over 10 years. O'Brien's doesn't just cut hair, they give you a proper gentleman's experience."</p>
+          <div class="testimonial-author">James R.</div>
+        </div>
+        <div class="testimonial-card fade-in-up delay-1">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"The straight razor shave is an absolute must. Hot towels, rich lather, and the smoothest finish you'll ever feel. Classic craftsmanship at its finest."</p>
+          <div class="testimonial-author">Michael T.</div>
+        </div>
+        <div class="testimonial-card fade-in-up delay-2">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Brought my son here for his first real haircut. They were so patient and made it a great experience. We'll both be regulars now."</p>
+          <div class="testimonial-author">David L.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer class="footer section" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-in-left">
+          <a href="#home" class="nav-logo">
+            <span class="logo-icon">✂</span>
+            <span class="logo-text">O'Brien's <em>Barbershop</em></span>
+          </a>
+          <p>Serving the community since 1987 with traditional barbering at its finest. Come for the cut, stay for the experience.</p>
+        </div>
+        <div class="footer-info fade-in-up">
+          <h4>Hours</h4>
+          <ul class="hours-list">
+            <li><span>Monday – Friday</span><span>8:00 AM – 7:00 PM</span></li>
+            <li><span>Saturday</span><span>9:00 AM – 5:00 PM</span></li>
+            <li class="closed"><span>Sunday</span><span>Closed</span></li>
+          </ul>
+        </div>
+        <div class="footer-contact fade-in-right">
+          <h4>Get In Touch</h4>
+          <ul class="contact-list">
+            <li><span class="contact-icon">&#9876;</span> 123 Main Street, Anytown</li>
+            <li><span class="contact-icon">&#9742;</span> (555) 123-4567</li>
+            <li><span class="contact-icon">&#9993;</span> info@obriensbarbershop.com</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" class="social-link">FB</a>
+            <a href="#" class="social-link">IG</a>
+            <a href="#" class="social-link">X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom fade-in">
+        <p>&copy; 2024 O'Brien's Classic Barbershop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scheduling Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="bookingModal">
+      <button class="modal-close" id="modalClose">&times;</button>
+
+      <!-- Step 1: Time Selection -->
+      <div class="modal-step" id="timeStep">
+        <h3 class="modal-title">Select a Time</h3>
+        <p class="modal-subtitle" id="modalDate"></p>
+
+        <div class="time-slots-container">
+          <div class="time-period" data-period="morning">
+            <h4>Morning Hours</h4>
+            <div class="time-slots" id="timeSlotsMorning"></div>
+          </div>
+          <div class="time-period" data-period="afternoon">
+            <h4>Afternoon Hours</h4>
+            <div class="time-slots" id="timeSlotsAfternoon"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Customer Info -->
+      <div class="modal-step hidden" id="infoStep">
+        <h3 class="modal-title">Your Information</h3>
+        <p class="modal-subtitle" id="selectedDateTime"></p>
+
+        <button type="button" class="back-btn" id="backToTimeBtn">&#8592; Change time</button>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row">
+            <div class="form-group fade-in-up">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" required placeholder="John">
+            </div>
+            <div class="form-group fade-in-up delay-1">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" required placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group fade-in-up delay-2">
+              <label for="email">Email</label>
+              <input type="email" id="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group fade-in-up delay-3">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" required placeholder="(555) 123-4567">
+            </div>
+          </div>
+          <div class="form-group fade-in-up delay-4">
+            <label for="service">Select Service</label>
+            <select id="service" required>
+              <option value="">Choose a service...</option>
+              <option value="haircut">Classic Haircut — $35</option>
+              <option value="razor-shave">Razor Shave — $30</option>
+              <option value="beard-trim">Beard Trim — $25</option>
+              <option value="combo">Haircut & Beard Combo — $55</option>
+              <option value="coloring">Hair Coloring — $45</option>
+              <option value="kids">Kids Haircut — $25</option>
+            </select>
+          </div>
+          <div class="form-group fade-in-up delay-5">
+            <label for="notes">Notes (optional)</label>
+            <textarea id="notes" rows="3" placeholder="Any special requests..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Confirm Appointment</button>
+        </form>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div class="modal-step hidden" id="confirmStep">
+        <div class="confirmation-content fade-in-up">
+          <div class="confirm-icon">&#10004;</div>
+          <h3 class="modal-title">Appointment Confirmed!</h3>
+          <p class="modal-subtitle">We look forward to seeing you.</p>
+          <div class="confirmation-details" id="confirmationDetails"></div>
+          <button class="btn btn-primary btn-block" id="closeConfirm">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
