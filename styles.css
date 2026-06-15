@@ -238,8 +238,13 @@ a {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    url('https://images.unsplash.com/photo-1585747860017-9e482c35d994?w=1600&q=80') center/cover no-repeat;
+  z-index: 0;
+}
+
+.hero-bg svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-overlay {
@@ -493,7 +498,23 @@ a {
 }
 
 /* ===== ABOUT SECTION ===== */
-.about { background: #fff; }
+/* About section — completely styled with high specificity */
+#about, .about { background: #ffffff !important; padding: 100px 0 !important; border-top: 3px solid var(--color-border) !important; border-bottom: 3px solid var(--color-border) !important; }
+
+/* Force all text in about section to be clearly visible */
+#about .section-tag, #about span.section-tag { color: #1a1208 !important; font-weight: 700 !important; display: block !important; }
+#about .section-title, h2.section-title, #about h2, .about h2 { color: #000000 !important; font-weight: 900 !important; font-size: clamp(2rem,4vw,3rem) !important; display: block !important; }
+#aboutText, .about-text p, #about p, .about p { color: #111111 !important; font-size: 1.1rem !important; line-height: 1.9 !important; }
+#aboutText strong, #about strong { color: var(--color-primary) !important; }
+
+/* Visible divider */
+#about .section-divider span, .about .section-divider span { background: linear-gradient(90deg, transparent, #1a1208, transparent) !important; height: 2px !important; width: 80px !important; }
+
+/* About features */
+.about-features { display: flex !important; justify-content: center !important; gap: 40px !important; flex-wrap: wrap !important; padding-top: 20px !important; }
+.about-feature-icon { font-size: 2rem !important; margin-bottom: 8px !important; color: var(--color-primary) !important; display: block !important; }
+.about-feature-name { color: #111111 !important; font-family: var(--font-accent) !important; font-size: 0.8rem !important; letter-spacing: 2px !important; text-transform: uppercase !important; display: block !important; }
+.about-feature { text-align: center !important; display: block !important; }
 
 .about-grid {
   max-width: 900px;
@@ -636,40 +657,11 @@ a {
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
+  display: block;
 }
 
-.gallery-item .img-fallback {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #2D2520 0%, #4A3F35 50%, #1A1208 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.gallery-item .img-fallback svg {
-  width: 48px;
-  height: 48px;
-  stroke: rgba(212, 168, 67, 0.3);
-  fill: none;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.gallery-item.img-error .img-fallback {
-  opacity: 1;
-}
-
-.gallery-item img.loading {
-  opacity: 0;
-}
-
-.gallery-item img.loaded {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 .gallery-overlay {
@@ -691,7 +683,6 @@ a {
   text-transform: uppercase;
 }
 
-.gallery-item:hover img { transform: scale(1.08); }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 
 /* ===== SCHEDULE / CALENDAR SECTION ===== */

@@ -443,30 +443,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ===== GALLERY IMAGE FALLBACKS =====
-function initGalleryImages() {
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  galleryItems.forEach(item => {
-    const img = item.querySelector('img');
-    if (!img) return;
-
-    // Mark as loading until it confirms ready
-    img.classList.add('loading');
-
-    img.addEventListener('load', () => {
-      img.classList.remove('loading');
-      img.classList.add('loaded');
-    }, { once: true });
-
-    img.addEventListener('error', () => {
-      // Remove broken image — the fallback is always in place behind it
-      img.style.display = 'none';
-      item.classList.add('img-error');
-    }, { once: true });
-  });
-}
-
 // ===== INIT =====
 renderCalendar();
 initScrollAnimations();
-initGalleryImages();
