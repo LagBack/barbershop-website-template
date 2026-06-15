@@ -32,6 +32,7 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
+    <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-pattern"></div>
     <div class="hero-content">
@@ -175,26 +176,32 @@
       <div class="gallery-grid">
         <div class="gallery-item fade-in-up">
           <img src="https://images.unsplash.com/photo-1503951914875-452161b75e73?w=400&h=400&fit=crop&q=80" alt="Classic haircut style" loading="lazy">
+          <div class="img-fallback"><svg viewBox="0 0 24 24"><path d="M14.5 2.5l5 5"/><path d="M9.5 2.5l-5 5"/><path d="M14.5 7.5L9.5 16.5"/><circle cx="9.5" cy="17.5" r="3"/></svg></div>
           <div class="gallery-overlay"><span>Classic Cuts</span></div>
         </div>
         <div class="gallery-item fade-in-up delay-1">
           <img src="https://images.unsplash.com/photo-1621605813440-a3aee38eeefd?w=400&h=400&fit=crop&q=80" alt="Beard grooming" loading="lazy">
+          <div class="img-fallback"><svg viewBox="0 0 24 24"><path d="M7 16c0-3.5 2-5 5-5s5 1.5 5 5"/><line x1="12" y1="4" x2="12" y2="11"/><path d="M8 20h8"/></svg></div>
           <div class="gallery-overlay"><span>Beard Grooming</span></div>
         </div>
         <div class="gallery-item fade-in-up delay-2">
           <img src="https://images.unsplash.com/photo-1599351431202-1e0f76385746?w=400&h=400&fit=crop&q=80" alt="Shop tools" loading="lazy">
+          <div class="img-fallback"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="16" rx="1"/><line x1="14" y1="8" x2="20" y2="8"/><line x1="14" y1="12" x2="20" y2="12"/><circle cx="17" cy="18" r="3"/></svg></div>
           <div class="gallery-overlay"><span>Traditional Tools</span></div>
         </div>
         <div class="gallery-item fade-in-up delay-3">
           <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=400&h=400&fit=crop&q=80" alt="Barber at work" loading="lazy">
+          <div class="img-fallback"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M8 20v-3a4 4 0 0 1 8 0v3"/></svg></div>
           <div class="gallery-overlay"><span>Expert Craft</span></div>
         </div>
         <div class="gallery-item fade-in-up delay-4">
           <img src="https://images.unsplash.com/photo-1605497788044-5a32c70e8726?w=400&h=400&fit=crop&q=80" alt="Barber chair" loading="lazy">
+          <div class="img-fallback"><svg viewBox="0 0 24 24"><rect x="6" y="8" width="12" height="10" rx="2"/><path d="M9 18v2"/><path d="M15 18v2"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
           <div class="gallery-overlay"><span>The Chair</span></div>
         </div>
         <div class="gallery-item fade-in-up delay-5">
           <img src="https://images.unsplash.com/photo-1596728325488-58c87691e9a0?w=400&h=400&fit=crop&q=80" alt="Finished look" loading="lazy">
+          <div class="img-fallback"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
           <div class="gallery-overlay"><span>Final Result</span></div>
         </div>
       </div>
@@ -312,13 +319,15 @@
         <h3 class="modal-title">Select a Time</h3>
         <p class="modal-subtitle" id="modalDate"></p>
 
-        <div class="time-slots-container">
-          <div class="time-period" data-period="morning">
-            <h4>Morning Hours</h4>
+        <div class="divider"><span></span></div>
+
+        <div class="time-slots-container" id="slotsContainer">
+          <div class="time-period-group">
+            <h4>Morning</h4>
             <div class="time-slots" id="timeSlotsMorning"></div>
           </div>
-          <div class="time-period" data-period="afternoon">
-            <h4>Afternoon Hours</h4>
+          <div class="time-period-group">
+            <h4>Afternoon</h4>
             <div class="time-slots" id="timeSlotsAfternoon"></div>
           </div>
         </div>
@@ -327,33 +336,38 @@
       <!-- Step 2: Customer Info -->
       <div class="modal-step hidden" id="infoStep">
         <h3 class="modal-title">Your Information</h3>
-        <p class="modal-subtitle" id="selectedDateTime"></p>
+
+        <div class="divider"><span></span></div>
 
         <button type="button" class="back-btn" id="backToTimeBtn">&#8592; Change time</button>
 
+        <!-- Selected time summary bar -->
+        <div class="selected-summary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#D4A843" stroke-width="1.5"/><path d="M8 4v4l2.5 1.5" stroke="#D4A843" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span id="selectedDateTime"></span>
+        </div>
+
         <form class="booking-form" id="bookingForm">
-          <div class="form-row">
-            <div class="form-group fade-in-up">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" required placeholder="John">
-            </div>
-            <div class="form-group fade-in-up delay-1">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" required placeholder="Smith">
-            </div>
+          <div class="form-group full">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" required placeholder="John">
           </div>
-          <div class="form-row">
-            <div class="form-group fade-in-up delay-2">
+          <div class="form-group full">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" required placeholder="Smith">
+          </div>
+          <div class="form-row-wide">
+            <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" required placeholder="john@example.com">
             </div>
-            <div class="form-group fade-in-up delay-3">
+            <div class="form-group">
               <label for="phone">Phone</label>
               <input type="tel" id="phone" required placeholder="(555) 123-4567">
             </div>
           </div>
-          <div class="form-group fade-in-up delay-4">
-            <label for="service">Select Service</label>
+          <div class="form-group full">
+            <label for="service">Service</label>
             <select id="service" required>
               <option value="">Choose a service...</option>
               <option value="haircut">Classic Haircut — $35</option>
@@ -364,8 +378,8 @@
               <option value="kids">Kids Haircut — $25</option>
             </select>
           </div>
-          <div class="form-group fade-in-up delay-5">
-            <label for="notes">Notes (optional)</label>
+          <div class="form-group full">
+            <label for="notes">Notes</label>
             <textarea id="notes" rows="3" placeholder="Any special requests..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Confirm Appointment</button>
@@ -378,6 +392,7 @@
           <div class="confirm-icon">&#10004;</div>
           <h3 class="modal-title">Appointment Confirmed!</h3>
           <p class="modal-subtitle">We look forward to seeing you.</p>
+          <div class="divider"><span></span></div>
           <div class="confirmation-details" id="confirmationDetails"></div>
           <button class="btn btn-primary btn-block" id="closeConfirm">Done</button>
         </div>
