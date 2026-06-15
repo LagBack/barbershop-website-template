@@ -1,4 +1,4 @@
-# O'Brien's Classic Barbershop — Portfolio Showcase
+# Portfolio Barbershop Website
 
 A polished, single-page barbershop website built to demonstrate modern front-end development skills. This project is part of my portfolio and serves as a tangible example of the quality I bring to every project.
 
