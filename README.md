@@ -83,7 +83,3 @@ Beyond writing correct HTML, CSS, and JS, this project shows I understand:
 - **Accessibility** — keyboard-navigable modal (Escape to close), focus states on form inputs, semantic landmarks
 - **Performance** — zero external dependencies, inline SVG illustrations, no network requests beyond fonts
 - **Maintenance** — well-organized CSS with named sections, consistent class naming conventions, and commented code blocks
-
-## License
-
-This project is built as a portfolio showcase piece. The design concept (barbershop theme, copy text, color system) is original. Gallery images are provided by the site owner. Feel free to review the code as an example of front-end development craftsmanship.
